@@ -29,7 +29,7 @@ function App() {
       alert(`${doubleContact.name} is already in contacts`);
       return;
     }
-    setContacts([...contacts, { id: uuidv4(), name, number }]);
+    setContacts((prev) => [...prev, { id: uuidv4(), name, number }]);
   }
 
   function deleteContact(contactId) {
